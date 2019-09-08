@@ -2,30 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://caolue.github.io./2019/09/04/live2d-1/</loc>
+    <loc>http://caolue.github.io./2019/09/04/%E6%AC%A2%E8%BF%8E/</loc>
     
-    <lastmod>2019-09-04T14:57:33.388Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://caolue.github.io./2019/09/04/live2d/</loc>
-    
-    <lastmod>2019-09-04T14:56:35.298Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://caolue.github.io./2019/09/04/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/</loc>
-    
-    <lastmod>2019-09-04T05:29:50.742Z</lastmod>
+    <lastmod>2019-09-08T09:49:24.494Z</lastmod>
     
   </url>
   
 </urlset>
-
-<% if (page.keywords){ %>
-<meta name="keywords" content="<%= page.keywords %>,<%= config.keywords %>">
-<% } else if (config.keywords){ %>
-<meta name="keywords" content="<%= config.keywords %>">
-<%} %>
