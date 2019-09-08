@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://caolue.github.io.">
-  <title>Archives: 2019 | 曹略的博客</title>
+  <title>python函数注意事项 | 曹略的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="个人技术博客">
+  <meta name="description" content="隐藏        var message_Path = &apos;/live2d/&apos;     var home_Path = &apos;https://caolue.github.io/&apos;         loadlive2d(&quot;live2d&quot;, &quot;/live2d/model/tia/model.json&quot;);    写在开头本文是我在学习python中遇到的注意事项，参考自《">
 <meta name="keywords" content="前端博客，后端博客，java,vue.js,jquery,html5,springboot,springcloud">
-<meta property="og:type" content="website">
-<meta property="og:title" content="曹略的博客">
-<meta property="og:url" content="http://caolue.github.io./archives/2019/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python函数注意事项">
+<meta property="og:url" content="http://caolue.github.io./2019/09/08/python函数初入门/index.html">
 <meta property="og:site_name" content="曹略的博客">
-<meta property="og:description" content="个人技术博客">
+<meta property="og:description" content="隐藏        var message_Path = &apos;/live2d/&apos;     var home_Path = &apos;https://caolue.github.io/&apos;         loadlive2d(&quot;live2d&quot;, &quot;/live2d/model/tia/model.json&quot;);    写在开头本文是我在学习python中遇到的注意事项，参考自《">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-09-08T10:44:10.354Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="曹略的博客">
-<meta name="twitter:description" content="个人技术博客">
+<meta name="twitter:title" content="python函数注意事项">
+<meta name="twitter:description" content="隐藏        var message_Path = &apos;/live2d/&apos;     var home_Path = &apos;https://caolue.github.io/&apos;         loadlive2d(&quot;live2d&quot;, &quot;/live2d/model/tia/model.json&quot;);    写在开头本文是我在学习python中遇到的注意事项，参考自《">
   
     <link rel="alternative" href="/atom.xml" title="曹略的博客" type="application/atom+xml">
   
@@ -153,76 +154,216 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-python函数初入门" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      python函数注意事项
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/08/python函数初入门/" class="archive-article-date">
+
+        
+        <a href="/2019/09/08/python函数初入门/" class="archive-article-date">
   	<time datetime="2019-09-08T09:52:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-08</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/08/python函数初入门/">python函数注意事项</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+<link rel="stylesheet" href="/live2d/css/live2d.css">
+<div id="landlord">
+    <div class="message" style="opacity:0"></div>
+    <canvas id="live2d" width="280" height="250" class="live2d"></canvas>
+    <div class="hide-button">隐藏</div>
+</div>
+<script type="text/javascript" src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript">
+    var message_Path = '/live2d/'
+    var home_Path = 'https://caolue.github.io/'
+</script>
+<script type="text/javascript" src="/live2d/js/live2d.js"></script>
+<script type="text/javascript" src="/live2d/js/message.js"></script>
+<script type="text/javascript">
+    loadlive2d("live2d", "/live2d/model/tia/model.json");
+</script>
 
-        <div class="article-info info-on-right">
-          
-          
+<hr>
+<h2 id="写在开头"><a href="#写在开头" class="headerlink" title="写在开头"></a>写在开头</h2><p>本文是我在学习python中遇到的注意事项，参考自《“笨方法”学python3》，写在这里是为了方便自己随时阅读，同时也供大家查看。</p>
+<hr>
+<h2 id="函数定义是从def开始的吗？"><a href="#函数定义是从def开始的吗？" class="headerlink" title="函数定义是从def开始的吗？"></a>函数定义是从def开始的吗？</h2><p>在某些编程语言当中，函数声明和函数定义是区分开的（在这些编程语言当中函数声明和函数定义可以出现在不同的文件中，比如C语言），但是在Python中，函数声明和函数定义是视为一体的。在Python中，函数定义的基本形式如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">def function(params):</span><br><span class="line">    block</span><br><span class="line">    return expression/value</span><br></pre></td></tr></table></figure>
 
+<p>　　在这里说明几点：</p>
+<p>　　（1）在Python中采用def关键字进行函数的定义，不用指定返回值的类型。</p>
+<p>　　（2）函数参数params可以是零个、一个或者多个，同样的，函数参数也不用指定参数类型，因为在Python中变量都是弱类型的，Python会自动根据值来维护其类型。</p>
+<p>　　（3）return语句是可选的，它可以在函数体内任何地方出现，表示函数调用执行到此结束；如果没有return语句，会自动返回NONE，如果有return语句，但是return后面没有接表达式或者值的话也是返回NONE。</p>
+<hr>
+<h2 id="函数名是只有字符和下划线组成的吗？"><a href="#函数名是只有字符和下划线组成的吗？" class="headerlink" title="函数名是只有字符和下划线组成的吗？"></a>函数名是只有字符和下划线组成的吗？</h2><p>函数名应该为小写，可以用下划线风格单词以增加可读性。如：myfunction，my_example_function。<br>注意：混合大小写仅被允许用于这种风格已经占据优势的时候，以便保持向后兼容。</p>
+<hr>
+<h2 id="函数名之后是不是紧跟着括号？"><a href="#函数名之后是不是紧跟着括号？" class="headerlink" title="函数名之后是不是紧跟着括号？"></a>函数名之后是不是紧跟着括号？</h2><p>是的</p>
+<hr>
+<h2 id="括号里是否包含着参数且多个参数以逗号隔开"><a href="#括号里是否包含着参数且多个参数以逗号隔开" class="headerlink" title="括号里是否包含着参数且多个参数以逗号隔开"></a>括号里是否包含着参数且多个参数以逗号隔开</h2><p>可以不含参数，如果多个参数则用逗号隔开。</p>
+<hr>
+<h2 id="参数名称是否有重复？"><a href="#参数名称是否有重复？" class="headerlink" title="参数名称是否有重复？"></a>参数名称是否有重复？</h2><p>同样一个函数中，参数名不能重复使用。</p>
+<hr>
+<h2 id="紧跟着参数的是不是括号和冒号？"><a href="#紧跟着参数的是不是括号和冒号？" class="headerlink" title="紧跟着参数的是不是括号和冒号？"></a>紧跟着参数的是不是括号和冒号？</h2><p>是的</p>
+<hr>
+<h2 id="紧跟着函数定义的代码是否使用了4个空格的缩进？不能多，也不能少。"><a href="#紧跟着函数定义的代码是否使用了4个空格的缩进？不能多，也不能少。" class="headerlink" title="紧跟着函数定义的代码是否使用了4个空格的缩进？不能多，也不能少。"></a>紧跟着函数定义的代码是否使用了4个空格的缩进？不能多，也不能少。</h2><p>是的</p>
+<hr>
+<h2 id="函数结束的位置是否取消了缩进？"><a href="#函数结束的位置是否取消了缩进？" class="headerlink" title="函数结束的位置是否取消了缩进？"></a>函数结束的位置是否取消了缩进？</h2><p>是的</p>
+<hr>
+<h2 id="运行一个函数时，记住检查下面的要点。"><a href="#运行一个函数时，记住检查下面的要点。" class="headerlink" title="运行一个函数时，记住检查下面的要点。"></a>运行一个函数时，记住检查下面的要点。</h2><ol>
+<li>调用函数时是否使用了函数名？</li>
+<li>函数名是否紧跟着(字符？</li>
+<li>括号内是否放了你想要的的值并以逗号隔开？</li>
+<li>函数调用是否以)字符结尾？</li>
+</ol>
+<hr>
+<p>最后，将下面这句话读几遍：<br><strong>运行函数、调用函数和使用函数是同一个意思</strong></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/wechat.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://caolue.github.io./2019/09/08/python函数初入门/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/04/欢迎/" class="archive-article-date">
-  	<time datetime="2019-09-04T14:48:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-04</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/09/04/欢迎/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">欢迎你来到我的博客</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/04/欢迎/">欢迎你来到我的博客</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -246,8 +387,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
